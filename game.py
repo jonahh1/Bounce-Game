@@ -8,7 +8,7 @@ import random
 class Bricks:
     def __init__(self, canvas, color):
         self.canvas = canvas
-        self.id = canvas.create_oval(5, 5, 25, 25, fill=color, width=2)
+        self.id = canvas.create_rectangle(5, 5, 40, 25, fill=color, width=2)
 
 
 playing = False
@@ -38,8 +38,8 @@ def start_game(event):
             bricks.append(b)
 
         for i in range(0, 5):
-            for j in range(0, 19):
-                canvas.move(bricks[i][j].id, 25 * j, 25 * i)
+            for j in range(0, 12):
+                canvas.move(bricks[i][j].id, 40 * j, 25 * i)
 
         ball = Ball(canvas, BALL_COLOR[0], paddle, bricks, score)
         root.update_idletasks()
