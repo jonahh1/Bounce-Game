@@ -69,9 +69,9 @@ def start_game(event):
                 else:
                     # Game Over message and colour
                     file1 = open("highscore.txt","r+")
-                    highscore = str(file1.read())
+                    highscore = int(file1.read())
                     file1.close()
-                    if highscore < str(ball.hit):
+                    if highscore < ball.hit:
                         file1 = open("highscore.txt","w")
                         file1.write(str(ball.hit))
                         file1.close()
