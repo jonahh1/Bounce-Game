@@ -24,10 +24,10 @@ class Paddle:
 
     # How fast paddle should move to left or right
     def turn_left(self, event):
-        self.x = -3.5
+        self.x = -4
 
     def turn_right(self, event):
-        self.x = 0.5
+        self.x = 4
 
     def pauser(self,event):
         self.pausec+=1
